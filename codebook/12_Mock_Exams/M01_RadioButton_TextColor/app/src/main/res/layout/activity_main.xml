@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- [추가 코드] 사용자 제공 모의시험 요구사항을 독립 실행 화면으로 구성한다. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="모바일프로그래밍"
+        android:textColor="#F44336"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/instruction_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="선택한 색상에 따라 글자가 변경됩니다."
+        android:textColor="#424242"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/selection_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="글자 색상을 선택하세요."
+        android:textColor="#212121"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- RadioGroup이 세 버튼 중 하나만 선택되도록 관리한다. -->
+    <RadioGroup
+        android:id="@+id/color_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:checkedButton="@id/red_radio"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/red_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="빨간색" />
+
+        <RadioButton
+            android:id="@+id/blue_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="파란색" />
+
+        <RadioButton
+            android:id="@+id/green_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="초록색" />
+    </RadioGroup>
+
+    <!-- 초기에는 검은 글자이며 적용 버튼을 누른 뒤에만 선택 색상으로 바뀐다. -->
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="24dp"
+        android:background="#E0E0E0"
+        android:gravity="center"
+        android:text="모바일프로그래밍"
+        android:textColor="#212121"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/apply_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#000000"
+        android:text="색상 적용"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

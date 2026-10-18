@@ -17,6 +17,11 @@
 | `Shape Drawable` | [A05 설명](codebook/10_Assignments/A05_Shape_Buttons/README.md) · [테두리](codebook/10_Assignments/A05_Shape_Buttons/app/src/main/res/drawable/button_outline.xml) · [채움](codebook/10_Assignments/A05_Shape_Buttons/app/src/main/res/drawable/button_filled.xml) |
 | `SeekBar` · `ProgressBar` | [A06 Java](codebook/10_Assignments/A06_SeekBar_ProgressBar/app/src/main/java/com/example/myapplication/MainActivity.java) · [XML](codebook/10_Assignments/A06_SeekBar_ProgressBar/app/src/main/res/layout/activity_main.xml) |
 | `findViewById` | [F002 Java](codebook/02_View_Properties/F002_FindViewById/app/src/main/java/com/example/myapplication/MainActivity.java) |
+| `RadioButton` / `RadioGroup` | [M01 Java](codebook/12_Mock_Exams/M01_RadioButton_TextColor/app/src/main/java/com/example/myapplication/MainActivity.java) · [XML](codebook/12_Mock_Exams/M01_RadioButton_TextColor/app/src/main/res/layout/activity_main.xml) |
+| `getCheckedRadioButtonId` | [M01 Java](codebook/12_Mock_Exams/M01_RadioButton_TextColor/app/src/main/java/com/example/myapplication/MainActivity.java) |
+| `setTextColor` | [M01 Java](codebook/12_Mock_Exams/M01_RadioButton_TextColor/app/src/main/java/com/example/myapplication/MainActivity.java) |
+| `모의시험 M01` | [설명 README](codebook/12_Mock_Exams/M01_RadioButton_TextColor/README.md) · [Java](codebook/12_Mock_Exams/M01_RadioButton_TextColor/app/src/main/java/com/example/myapplication/MainActivity.java) · [XML](codebook/12_Mock_Exams/M01_RadioButton_TextColor/app/src/main/res/layout/activity_main.xml) |
+
 
 ### 교수님 실습과제 A01~A06
 
