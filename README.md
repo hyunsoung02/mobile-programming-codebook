@@ -23,6 +23,18 @@
 | `모의시험 M01` | [설명 README](codebook/12_Mock_Exams/M01_RadioButton_TextColor/README.md) · [Java](codebook/12_Mock_Exams/M01_RadioButton_TextColor/app/src/main/java/com/example/myapplication/MainActivity.java) · [XML](codebook/12_Mock_Exams/M01_RadioButton_TextColor/app/src/main/res/layout/activity_main.xml) |
 
 
+### 수업 실습 기능 P01~P07
+
+| 실습 | 검색 기능 | Java | XML / 리소스 | 설명 |
+|---|---|---|---|---|
+| P01 | XML `LinearLayout` · Button 3개 세로 배치 | [Java](codebook/13_Class_Practicals/P01_XML_LinearLayout_Buttons/app/src/main/java/com/example/myapplication/MainActivity.java) | [XML](codebook/13_Class_Practicals/P01_XML_LinearLayout_Buttons/app/src/main/res/layout/activity_main.xml) | [README](codebook/13_Class_Practicals/P01_XML_LinearLayout_Buttons/README.md) |
+| P02 | Java `LinearLayout` · `addView()` | [Java](codebook/13_Class_Practicals/P02_Java_LinearLayout_Buttons/app/src/main/java/com/example/myapplication/MainActivity.java) | XML 없음(Java 직접 생성) | [README](codebook/13_Class_Practicals/P02_Java_LinearLayout_Buttons/README.md) |
+| P03 | `gravity` · `layout_gravity` 비교 | [Java](codebook/13_Class_Practicals/P03_Gravity_Comparison/app/src/main/java/com/example/myapplication/MainActivity.java) | [XML](codebook/13_Class_Practicals/P03_Gravity_Comparison/app/src/main/res/layout/activity_main.xml) | [README](codebook/13_Class_Practicals/P03_Gravity_Comparison/README.md) |
+| P04 | `ImageView` · `ScrollView` · 이미지 전환 | [A03 Java](codebook/10_Assignments/A03_Toggle_ImageViews/app/src/main/java/com/example/myapplication/MainActivity.java) | [A03 XML](codebook/10_Assignments/A03_Toggle_ImageViews/app/src/main/res/layout/activity_main.xml) · [Drawable](codebook/10_Assignments/A03_Toggle_ImageViews/app/src/main/res/drawable/sample_image.xml) | [README](codebook/13_Class_Practicals/P04_Image_Switch/README.md) |
+| P05 | `EditText` · `TextWatcher` · `Toast` | [A04 Java](codebook/10_Assignments/A04_SNS_Byte_Counter/app/src/main/java/com/example/myapplication/MainActivity.java) | [A04 XML](codebook/10_Assignments/A04_SNS_Byte_Counter/app/src/main/res/layout/activity_main.xml) | [README](codebook/13_Class_Practicals/P05_TextWatcher_Input/README.md) |
+| P06 | Selector Drawable · `state_pressed` | [Java](codebook/13_Class_Practicals/P06_Selector_Drawable/app/src/main/java/com/example/myapplication/MainActivity.java) | [XML](codebook/13_Class_Practicals/P06_Selector_Drawable/app/src/main/res/layout/activity_main.xml) · [Selector](codebook/13_Class_Practicals/P06_Selector_Drawable/app/src/main/res/drawable/image_selector.xml) | [README](codebook/13_Class_Practicals/P06_Selector_Drawable/README.md) |
+| P07 | 여러 Activity · `Intent` · Manifest | [Main](codebook/13_Class_Practicals/P07_Multiple_Activities/app/src/main/java/com/example/myapplication/MainActivity.java) · [Second](codebook/13_Class_Practicals/P07_Multiple_Activities/app/src/main/java/com/example/myapplication/SecondActivity.java) | [화면 1](codebook/13_Class_Practicals/P07_Multiple_Activities/app/src/main/res/layout/activity_main.xml) · [화면 2](codebook/13_Class_Practicals/P07_Multiple_Activities/app/src/main/res/layout/activity_second.xml) · [Manifest](codebook/13_Class_Practicals/P07_Multiple_Activities/app/src/main/AndroidManifest.xml) | [README](codebook/13_Class_Practicals/P07_Multiple_Activities/README.md) |
+
 ### 교수님 실습과제 A01~A06
 
 | 과제 | 요구 기능 | 전체 코드 | 설명 | 시험 조건 변경 시 |
