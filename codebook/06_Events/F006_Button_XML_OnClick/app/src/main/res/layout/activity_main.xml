@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- [추가 코드] XML 선언과 네임스페이스, 루트 및 크기·방향 속성은 전체 화면 파일을 위한 최소 틀이다. -->
+<!-- 출처: (Part1)Chapter03_첫번째앱만들기.pdf PDF p.39의 버튼 onClick 지정. -->
+<!-- [추가 코드] 아래 한국어 주석은 XML 속성 역할과 시험에서 바꿀 위치를 설명한다. -->
+<!-- match_parent는 부모의 사용 가능한 크기이며, vertical은 자식을 세로로 배치한다. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- [추가 코드] button1 ID는 시험에서 버튼을 식별하기 위해 부여했다. Java에서 조회하지 않는다. -->
+    <!-- wrap_content는 버튼 내용에 필요한 크기다. 시험의 크기 조건은 width/height에서 바꾼다. -->
+    <!-- 시험: 표시 문구는 text, ID는 id를 바꾼다. ID와 클릭 메서드명은 서로 독립이다. -->
+    <!-- onClick 값은 Java의 public void onButtonClicked(View v) 메서드명과 반드시 같아야 한다. -->
+    <!-- 시험: 메서드명을 바꾸면 Java와 아래 onClick을 함께 바꾼다. 괄호와 매개변수는 적지 않는다. -->
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="확인 1"
+        android:onClick="onButtonClicked" />
+
+</LinearLayout>

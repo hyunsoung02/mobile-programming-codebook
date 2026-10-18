@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 출처: (Part2)Chapter03_기본위젯과드로어블사용하기.pdf PDF p.172-173.
+     [추가 코드] 그림의 세로 배치를 전체 XML로 구현하며 수치/ID는 구현 선택이다. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <!-- SeekBar 값 변경 → MainActivity.onProgressChanged → 나머지 두 뷰 갱신.
+         시험: 범위 max는 SeekBar와 ProgressBar를 함께 바꿔야 막대 비율이 일치한다.
+         [추가 코드] 0..100 범위/초기값 45는 예시이며 초기값 수정 위치는 여기다. -->
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="진행 값 조절"
+        android:max="100"
+        android:progress="45" />
+
+    <!-- horizontal 스타일이 없으면 기본 원형 표시가 된다.
+         indeterminate=false는 불확정 반복 애니메이션 대신 실제 값을 표시한다. -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:indeterminate="false"
+        android:max="100" />
+
+    <!-- p.172의 입력상자. Java가 value_input에 숫자를 문자열로 넣는다.
+         [추가 코드] 숫자 키보드/중앙 정렬/힌트는 화면 구성 선택이다.
+         입력상자를 직접 수정해 SeekBar를 움직이는 역방향 이벤트는 추가하지 않는다. -->
+    <EditText
+        android:id="@+id/value_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:hint="현재 값"
+        android:inputType="number"
+        android:textSize="20sp" />
+</LinearLayout>

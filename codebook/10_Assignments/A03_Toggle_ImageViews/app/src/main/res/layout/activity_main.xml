@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 출처: (Part2)Chapter02_레이아웃익히기.pdf PDF p.125-126.
+     [추가 코드] 전체 XML·ID·문구·크기·학습 주석을 보완했다. 위/아래 영역은 같은 weight로 나눈다.
+     수직 LinearLayout은 두 스크롤 영역과 가운데 버튼만 배치한다. 별도 app 네임스페이스는 필요 없다. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 높이 0dp + weight=1로 버튼을 제외한 공간의 절반을 받는다.
+         ScrollView는 직접 자식을 하나만 허용한다. 이 예제의 직접 자식은 ImageView 하나다. -->
+    <ScrollView
+        android:id="@+id/top_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- [추가 코드] 720dp 높이는 세로 스크롤을 확인할 수 있는 샘플 크기다.
+             src는 Java에서 위쪽에만 설정한다. fitXY는 샘플을 정해진 크기로 늘린다.
+             시험: 이미지 높이를 바꾸면 아래 ImageView도 맞춘다. 작으면 스크롤이 생기지 않는다. -->
+        <ImageView
+            android:id="@+id/top_image"
+            android:layout_width="match_parent"
+            android:layout_height="720dp"
+            android:contentDescription="위쪽으로 이동한 샘플 이미지"
+            android:scaleType="fitXY" />
+    </ScrollView>
+
+    <!-- Java의 move_button 조회와 연결된다. XML onClick과 Java 리스너를 중복 등록하지 않는다.
+         과제 본문의 버튼 하나를 사용하며, 클릭할 때마다 위/아래로 번갈아 이동한다. -->
+    <Button
+        android:id="@+id/move_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="이미지 이동" />
+
+    <!-- 각 ScrollView는 별도 스크롤 위치를 가진다. 이미지가 옮겨져도 영역 크기는 유지된다. -->
+    <ScrollView
+        android:id="@+id/bottom_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- 이 ID와 Java R.id.bottom_image가 같아야 한다. 초기 src는 비워 둔다. -->
+        <ImageView
+            android:id="@+id/bottom_image"
+            android:layout_width="match_parent"
+            android:layout_height="720dp"
+            android:contentDescription="아래쪽으로 이동한 샘플 이미지"
+            android:scaleType="fitXY" />
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 출처: (Part2)Chapter02_레이아웃익히기.pdf PDF p.127-128.
+     [추가 코드] 도식/조건을 복사 가능한 세로 LinearLayout 전체 XML로 구현했다. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- p.128 조언을 우선하여 맨 위에 배치한다. end는 오른쪽 정렬(LTR)이다.
+         p.127 배치로 바꾸려면 이 TextView 전체를 message_input 바로 뒤로 옮긴다.
+         [추가 코드] ID/초기값/색상 수치는 구현 선택이며 Java가 byte_count를 갱신한다. -->
+    <TextView
+        android:id="@+id/byte_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="0/80 바이트"
+        android:textColor="#C62828"
+        android:textSize="18sp" />
+
+    <!-- 0dp + weight=1은 카운터/버튼을 뺀 나머지 높이를 채워 버튼을 아래에 둔다.
+         [추가 코드] 36sp/줄 간격 8dp는 한 줄 한글 약 8자용 시작값이다.
+         시험: 기기 폭·글꼴 배율에 맞춰 textSize/lineSpacingExtra를 조정한다.
+         maxLength는 문자 제한이므로 80바이트 요구로 오해해 추가하지 않는다. -->
+    <EditText
+        android:id="@+id/message_input"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top|start"
+        android:hint="글을 입력하세요"
+        android:inputType="textMultiLine"
+        android:lineSpacingExtra="8dp"
+        android:textColor="#212121"
+        android:textColorHint="#666666"
+        android:textSize="36sp" />
+
+    <!-- p.127: 아래쪽에 전송/닫기를 가로 배치. 같은 weight는 같은 너비다. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/send_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="전송" />
+
+        <!-- 화면 배치만 요구된 닫기 버튼에는 onClick/종료 이벤트를 넣지 않는다. -->
+        <Button
+            android:id="@+id/close_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="닫기" />
+    </LinearLayout>
+</LinearLayout>

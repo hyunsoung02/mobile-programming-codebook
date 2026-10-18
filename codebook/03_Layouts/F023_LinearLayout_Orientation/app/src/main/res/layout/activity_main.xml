@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 출처: (Part2)Chapter02_레이아웃익히기.pdf PDF p.11, 16-26.
+     [추가 코드] 전체 XML 문서, 중첩 비교 구성, ID, 문구와 학습 주석을 제공한다.
+     vertical은 직접 자식을 위에서 아래로 쌓는다.
+     시험: 루트의 orientation을 바꾸면 아래 버튼 2개와 내부 행의 배치 방향이 바뀐다.
+     match_parent는 부모의 사용 가능한 크기를 채운다. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vertical_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 수직 배치에서는 버튼 폭을 부모에 맞추어도 다음 버튼이 아래에 배치된다.
+         wrap_content 높이는 버튼 내용에 필요한 크기를 사용한다.
+         시험: ID는 android:id, 표시 문구는 android:text에서 바꾼다. -->
+    <Button
+        android:id="@+id/vertical_button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="수직 1" />
+
+    <Button
+        android:id="@+id/vertical_button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="수직 2" />
+
+    <!-- [추가 코드] 같은 F023의 두 방향을 비교하기 위한 내부 행이다.
+         horizontal은 이 행의 직접 자식만 가로로 나열한다.
+         시험: 아래 orientation을 vertical로 바꾸면 이 행의 두 버튼만 위아래로 쌓인다. -->
+    <LinearLayout
+        android:id="@+id/horizontal_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- PDF p.24-25: 수평 배치의 첫 버튼 폭이 match_parent이면 뒤 버튼의 공간이 부족하다.
+             두 버튼의 폭을 wrap_content로 두어 나란히 보이게 한다.
+             시험: 버튼별 폭과 높이는 각 layout_width, layout_height에서 수정한다. -->
+        <Button
+            android:id="@+id/horizontal_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수평 1" />
+
+        <Button
+            android:id="@+id/horizontal_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수평 2" />
+    </LinearLayout>
+</LinearLayout>

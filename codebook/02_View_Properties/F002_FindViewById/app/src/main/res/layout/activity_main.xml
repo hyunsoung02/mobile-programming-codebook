@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 출처: (Part2)Chapter02_레이아웃익히기.pdf PDF p.111의 @+id/이름과 R.id.이름 대응. -->
+<!-- 네임스페이스 설명 출처: (Part2)Chapter01_안드로이드스튜디오와친숙해지기.pdf PDF p.89. -->
+<!-- [추가 코드] XML 선언과 LinearLayout 화면 틀은 독립된 전체 파일을 위한 보완이다. -->
+<!-- [추가 코드] 아래 한국어 주석은 역할·연결·시험 변경 위치와 흔한 오류를 설명한다. -->
+<!-- xmlns:android는 android: 속성을 사용할 네임스페이스다. 루트의 크기는 부모 화면에 맞춘다. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- [추가 코드] 이미지 없이 조회 대상을 보여 주기 위해 TextView와 문구·크기를 제공한다. -->
+    <!-- android:id는 ID를 지정하며 @+id/textView는 ID 리소스를 정의한다. Java는 R.id.textView로 참조한다. -->
+    <!-- 호출 순서: Java의 setContentView가 이 XML로 View를 만든 뒤 findViewById로 조회한다. -->
+    <!-- 시험: ID 이름을 바꾸면 Java의 R.id.textView도 함께 바꾼다. 변수명과 ID명은 독립이다. -->
+    <!-- 오류: XML 태그를 다른 View 종류로 바꾸면 Java의 TextView 타입·import도 함께 확인한다. -->
+    <!-- wrap_content는 내용에 필요한 크기다. 표시 문구를 바꿀 때는 아래 text만 수정한다. -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID로 참조할 TextView" />
+
+</LinearLayout>

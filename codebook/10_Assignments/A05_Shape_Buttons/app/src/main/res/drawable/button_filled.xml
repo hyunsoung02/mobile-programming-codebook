@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- p.170-171 조건의 Shape 구현. [추가 코드] 색상/반경 수치는 구현 선택이다.
+     activity_main.xml의 filled_button background가 이 파일과 연결된다. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- solid는 내부 배경색, corners는 모서리 반경이다. 글자색은 버튼 XML에서 설정한다. -->
+    <solid android:color="#E65100" />
+    <!-- 시험: 덜 둥글게 하려면 radius를 줄인다. dp를 사용하며 sp와 혼동하지 않는다. -->
+    <corners android:radius="6dp" />
+</shape>

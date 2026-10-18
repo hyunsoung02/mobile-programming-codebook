@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 출처: (Part2)Chapter03_기본위젯과드로어블사용하기.pdf PDF p.170-171.
+     [추가 코드] 배치와 크기 수치는 그림을 재현하기 위한 선택이다. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="32dp"
+    android:background="#FFFFFF">
+
+    <!-- p.170: 내부는 투명, 경계선과 글자는 같은 색이다.
+         background는 res/drawable/button_outline.xml과 연결된다.
+         [호환성 수정] 현재 Material3 테마에서 Button 자동 치환을 피하도록
+         완전한 클래스명을 쓰고 framework backgroundTint를 비운다.
+         단순 Button으로 바꾸면 테마의 MaterialButton/tint가 모양을 덮을 수 있다. -->
+    <android.widget.Button
+        android:id="@+id/outline_button"
+        android:layout_width="160dp"
+        android:layout_height="52dp"
+        android:background="@drawable/button_outline"
+        android:backgroundTint="@null"
+        android:text="버튼 1"
+        android:textColor="#E65100"
+        android:textSize="18sp" />
+
+    <!-- p.170: 채운 배경, 약간 둥근 모서리, 흰 글자.
+         시험: 색·반경은 button_filled.xml에서 수정한다. 이벤트는 연결하지 않는다. -->
+    <android.widget.Button
+        android:id="@+id/filled_button"
+        android:layout_width="160dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_filled"
+        android:backgroundTint="@null"
+        android:text="버튼 2"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+</LinearLayout>

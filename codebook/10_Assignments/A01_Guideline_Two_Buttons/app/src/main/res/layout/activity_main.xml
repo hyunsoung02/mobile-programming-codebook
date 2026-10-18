@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 출처: (Part2)Chapter01_안드로이드스튜디오와친숙해지기.pdf PDF p.105-106.
+     [추가 코드] 페이지의 배치 요구를 실행할 수 있도록 XML 전체와 ID·간격·학습 주석을 작성했다.
+     androidx.constraintlayout 위젯의 제약 속성은 android:가 아닌 app:를 사용한다.
+     app 접두사는 res-auto 네임스페이스에 연결해야 하며 AndroidX ConstraintLayout 의존성이 필요하다. -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 보이지 않는 수평 기준선이다. end=48dp는 부모 아래쪽에서 48dp 위라는 뜻이다.
+         시험: 선 높이를 바꾸려면 guide_end를 수정한다. vertical로 바꾸면 하단 정렬 기준이 사라진다. -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="48dp" />
+
+    <!-- 두 버튼의 bottom을 같은 선의 top에 연결하여 선 위쪽에 둔다.
+         좌우를 서로 연결한 수평 체인에서 0dp 폭은 남은 폭을 나눠 가진다.
+         시험: ID를 바꾸면 아래 right_button과 양방향 참조도 함께 바꾼다. -->
+    <Button
+        android:id="@+id/left_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="버튼 1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/right_button"
+        app:layout_constraintBottom_toTopOf="@id/bottom_guideline" />
+
+    <!-- 체인은 양쪽 뷰의 연결이 모두 있어야 한다. 끝은 부모에 연결해 가로 위치를 확정한다.
+         두 marginBottom을 같게 유지하면 같은 높이로 정렬된다. -->
+    <Button
+        android:id="@+id/right_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="버튼 2"
+        app:layout_constraintStart_toEndOf="@id/left_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_guideline" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,26 @@
+# Android / Gradle
+.gradle/
+**/.gradle/
+**/build/
+local.properties
+.externalNativeBuild/
+.cxx/
+captures/
+
+# IDE / OS
+.idea/
+**/.idea/
+*.iml
+.DS_Store
+
+# 강의 원본 및 작업용 메타데이터
+course_materials/
+.superpowers/
+
+# 개인 설정 및 비밀정보
+.env
+.env.*
+*.jks
+*.keystore
+secrets.properties
+*.log

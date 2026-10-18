@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    출처: (Part1)Chapter03_첫번째앱만들기.pdf PDF p.20-24, 54(화면 연결), p.28-31(TextView의 text).
+    [추가 코드] 화면 연결 확인에 필요한 TextView 한 개만 루트로 두는 최소 XML 전체 파일이다.
+    XML 선언과 Android 네임스페이스는 파일 및 android: 속성을 해석하기 위해 명시한다.
+    [추가 코드] 한국어 주석은 속성의 역할과 시험 수정 위치를 설명한다.
+    [추가 코드] screen_message ID는 수정할 식별자를 보여 주기 위한 것이며 Java에서 조회하지 않는다.
+    시험: ID가 바뀌면 @+id/screen_message를 수정한다. @+id는 새 ID 리소스를 선언한다.
+    layout_width/height의 match_parent는 부모의 사용 가능한 폭/높이를 채운다.
+    시험: 크기 조건이 바뀌면 두 속성을 wrap_content(내용 크기) 또는 지정한 dp 값으로 수정한다.
+    android:text는 화면에 표시할 문구다. 시험에서 제시한 문자열로 바꾼다.
+    이 파일명을 바꾸면 MainActivity의 R.layout.activity_main도 함께 바꾼다.
+-->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen_message"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="안녕, 안드로이드!" />

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- p.170-171 조건의 Shape 구현. [추가 코드] 태그/색상/두께 수치는 구현 선택이다.
+     activity_main.xml의 outline_button background가 이 리소스를 불러온다. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- 투명한 내부는 부모 배경이 비친다. 흰색 solid로 대체하면 투명이 아니다. -->
+    <solid android:color="#00000000" />
+    <!-- 시험: 색을 바꾸면 outline_button의 textColor도 같은 값으로 바꾼다. -->
+    <stroke android:width="2dp" android:color="#E65100" />
+</shape>
